@@ -9,10 +9,12 @@ omp_set_num_threads(atoi(argv[1]));
 }
 #pragma omp parallel
 {
-int id=omp_get_thread_num();
-int numThreads=omp_get_num_threads();
+int id = omp_get_thread_num();
+int numThreads = omp_get_num_threads();
 printf("Hello from thread %d of %d\n", id, numThreads);
 }
 printf("\n");
 return 0;
 }
+
+
